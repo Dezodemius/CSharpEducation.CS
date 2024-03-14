@@ -15,7 +15,7 @@ namespace BinarySearch.Tests
             int result = BinarySearch.Search(array, element);
 
             // Assert
-            Assert.Equals(4, result); // Последний элемент в массиве - 10, его индекс должен быть 4
+            Assert.That(result, Is.EqualTo(4));
         }
     
         [Test]
@@ -29,7 +29,7 @@ namespace BinarySearch.Tests
             int result = BinarySearch.Search(array, element);
 
             // Assert
-            Assert.Equals(0, result); // Первый элемент в массиве - 12, его индекс должен быть 0
+            Assert.That(result, Is.EqualTo(0));
         }
 
         [Test]
@@ -43,7 +43,7 @@ namespace BinarySearch.Tests
             int result = BinarySearch.Search(array, element);
 
             // Assert
-            Assert.Equals(-1, result); // Элемент 7 отсутствует в массиве, ожидаем -1
+            Assert.That(result, Is.Negative);
         }
 
         [Test]
@@ -57,8 +57,7 @@ namespace BinarySearch.Tests
             int result = BinarySearch.Search(array, element);
 
             // Assert
-            Assert.Equals(2, result); // Индекс элемента в массиве должен быть 2
+            Assert.That(result, Is.EqualTo(2));
         }
-
     }
 }
